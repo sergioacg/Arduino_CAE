@@ -98,8 +98,8 @@ void setup() {
   balanza.begin(DT, CLK);
   
   //Configura los botones
-  pinMode(modo, OUTPUT);
-  pinMode(tara, OUTPUT);
+  pinMode(modo, INPUT);
+  pinMode(tara, INPUT);
 
   // Inicializar el LCD
   lcd.init();
