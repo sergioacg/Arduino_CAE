@@ -76,7 +76,7 @@ void loop() {
   if ((millis() - oldTime) > 1000) { 
     detachInterrupt(digitalPinToInterrupt(flowSensor1Pin));
 
-    flowRate1 = (pulseCount1 * 60.0) / 7.5; // L/min (YF-S201: 1 pulso = 2.25 mL)
+    flowRate1 = (pulseCount1 * 60.0) / 7.5; // L/h (YF-S201: 1 pulso = 2.25 mL)
 
     // Reiniciar conteo de pulsos y tiempo
     pulseCount1 = 0;
@@ -87,7 +87,7 @@ void loop() {
     // Mostrar la tasa de vazão
     Serial.print("Flujo en el tanque 1: ");
     Serial.print(flowRate1);
-    Serial.println(" L/min \n\n");
+    Serial.println(" L/h \n\n");
   }
 }
 
